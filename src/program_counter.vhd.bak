@@ -1,0 +1,42 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.constants_pkg.all;
+
+entity program_counter is
+  generic ( ADDR_W_G  natural = ADDR_W );
+  port (
+    clk          in  std_logic;
+    rst_n        in  std_logic; 
+    pc_inc       in  std_logic;
+    pc_load      in  std_logic;
+    pc_load_val  in  std_logic_vector(ADDR_W_G-1 downto 0);
+    do_branch    in  std_logic;
+    off8         in  std_logic_vector(7 downto 0);
+    pc_addr      out std_logic_vector(ADDR_W_G-1 downto 0)
+  );
+end entity;
+
+architecture rtl of program_counter is
+  signal pc_reg     std_logic_vector(ADDR_W_G-1 downto 0) = (others='0');
+  signal off8_sext  signed(ADDR_W_G-1 downto 0);
+begin
+  off8_sext = resize(signed(off8), ADDR_W_G);
+
+  process(clk, rst_n)
+  begin
+    if rst_n = '0' then
+      pc_reg = (others='0');
+    elsif rising_edge(clk) then
+      if pc_load = '1' then
+        pc_reg = pc_load_val;
+      elsif do_branch = '1' then
+        pc_reg = std_logic_vector( signed(pc_reg) + off8_sext );
+      elsif pc_inc = '1' then
+        pc_reg = std_logic_vector( unsigned(pc_reg) + 1 );
+      end if;
+    end if;
+  end process;
+
+  pc_addr = pc_reg;
+end architecture;

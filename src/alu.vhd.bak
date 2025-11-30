@@ -1,0 +1,140 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.constants_pkg.all;
+
+entity alu is
+  port (
+    a      : in  std_logic_vector(DATA_W-1 downto 0);
+    b      : in  std_logic_vector(DATA_W-1 downto 0);
+    alu_op : in  std_logic_vector(3 downto 0);
+
+    y      : out std_logic_vector(DATA_W-1 downto 0);
+    zf     : out std_logic;
+    nf     : out std_logic;
+    cf     : out std_logic;
+    vf     : out std_logic
+  );
+end entity;
+
+architecture comb of alu is
+
+  signal a_u, b_u : unsigned(7 downto 0);
+  signal a_s, b_s : signed(7 downto 0);
+
+  signal y_int : std_logic_vector(7 downto 0);
+  signal c_int, v_int : std_logic;
+
+begin
+
+  a_u <= unsigned(a);
+  b_u <= unsigned(b);
+  a_s <= signed(a);
+  b_s <= signed(b);
+
+  process(a, b, alu_op, a_u, b_u, a_s, b_s)
+    variable sum_u : unsigned(8 downto 0);
+    variable sum_s : signed(8 downto 0);
+    variable mul_u : unsigned(8 downto 0);
+    variable y_s   : signed(7 downto 0);  -- signed version of output
+  begin
+
+    y_int <= (others => '0');
+    c_int <= '0';
+    v_int <= '0';
+
+    sum_u := (others => '0');
+    sum_s := (others => '0');
+    mul_u := (others => '0');
+    y_s   := (others => '0');
+
+    case alu_op is
+
+      --------------------------------------------------------------------
+      -- ADD (unsigned)
+      --------------------------------------------------------------------
+      when ALU_ADD =>
+        sum_u := resize(a_u, 9) + resize(b_u, 9);
+        y_int <= std_logic_vector(sum_u(7 downto 0));
+        c_int <= sum_u(8);
+
+        -- safe overflow: compute y_s separately
+        y_s := signed(sum_u(7 downto 0));
+        v_int <= (a_s(7) = b_s(7)) and (y_s(7) /= a_s(7));
+
+      --------------------------------------------------------------------
+      -- SUB
+      --------------------------------------------------------------------
+      when ALU_SUB =>
+        sum_s := resize(a_s, 9) - resize(b_s, 9);
+        y_int <= std_logic_vector(sum_s(7 downto 0));
+        c_int <= not sum_s(8);
+
+        y_s := signed(sum_s(7 downto 0));
+        v_int <= (a_s(7) /= b_s(7)) and (y_s(7) /= a_s(7));
+
+      --------------------------------------------------------------------
+      -- Logic ops
+      --------------------------------------------------------------------
+      when ALU_AND  => y_int <= a and b;
+      when ALU_OR   => y_int <= a or b;
+      when ALU_XOR  => y_int <= a xor b;
+      when ALU_NAND => y_int <= not (a and b);
+      when ALU_NOR  => y_int <= not (a or b);
+
+      --------------------------------------------------------------------
+      -- INC / DEC
+      --------------------------------------------------------------------
+      when ALU_INC =>
+        sum_u := resize(a_u, 9) + 1;
+        y_int <= std_logic_vector(sum_u(7 downto 0));
+        c_int <= sum_u(8);
+
+      when ALU_DEC =>
+        sum_s := resize(a_s, 9) - 1;
+        y_int <= std_logic_vector(sum_s(7 downto 0));
+        c_int <= not sum_s(8);
+
+      --------------------------------------------------------------------
+      -- SHIFTS
+      --------------------------------------------------------------------
+      when ALU_SHL =>
+        y_int <= std_logic_vector(shift_left(a_u, 1));
+        c_int <= a(7);
+
+      when ALU_SHR =>
+        y_int <= std_logic_vector(shift_right(a_u, 1));
+        c_int <= a(0);
+
+      --------------------------------------------------------------------
+      -- PASS A
+      --------------------------------------------------------------------
+      when ALU_PASSA =>
+        y_int <= a;
+
+      --------------------------------------------------------------------
+      -- MUL (legacy-safe)
+      --------------------------------------------------------------------
+      when ALU_MUL =>
+        mul_u := to_unsigned((to_integer(a_u) * to_integer(b_u)) mod 512, 9);
+        y_int <= std_logic_vector(mul_u(7 downto 0));
+        c_int <= mul_u(8);
+
+      --------------------------------------------------------------------
+      when others =>
+        y_int <= (others => '0');
+
+    end case;
+
+  end process;
+
+  --------------------------------------------------------------------
+  -- Output flags
+  --------------------------------------------------------------------
+  y  <= y_int;
+  zf <= '1' when y_int = x"00" else '0';
+  nf <= y_int(7);
+  cf <= c_int;
+  vf <= v_int;
+
+end architecture;

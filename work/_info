@@ -1,0 +1,400 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\13.1
+Ealu
+Z0 w1763911816
+Z1 DPx4 work 13 constants_pkg 0 22 D:f:bL@loIO`CEOY]]4CY0
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\altera\13.1\8bits cpu
+Z6 8C:/altera/13.1/8bits cpu/src/alu.vhd
+Z7 FC:/altera/13.1/8bits cpu/src/alu.vhd
+l0
+L6
+Velh<eEE5E13;C70Fl3eEJ1
+Z8 OV;C;10.1d;51
+32
+Z9 !s108 1763991940.318000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.1/8bits cpu/src/alu.vhd|
+Z11 !s107 C:/altera/13.1/8bits cpu/src/alu.vhd|
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+!s100 J2kgCCMI6l^`6T:11BH7O0
+!i10b 1
+Acomb
+R1
+R2
+R3
+R4
+Z14 DEx4 work 3 alu 0 22 elh<eEE5E13;C70Fl3eEJ1
+l28
+L20
+V]B94?FJSN4dnA=8l:5^z?3
+R8
+32
+R9
+R10
+R11
+R12
+R13
+!s100 LigI3TCMg>N>lB=@5S79V0
+!i10b 1
+Pconstants_pkg
+R2
+R3
+R4
+Z15 w1763910326
+R5
+Z16 8C:/altera/13.1/8bits cpu/src/constants_pkg.vhd
+Z17 FC:/altera/13.1/8bits cpu/src/constants_pkg.vhd
+l0
+L5
+VD:f:bL@loIO`CEOY]]4CY0
+R8
+32
+Z18 !s108 1763991940.546000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.1/8bits cpu/src/constants_pkg.vhd|
+Z20 !s107 C:/altera/13.1/8bits cpu/src/constants_pkg.vhd|
+R12
+R13
+!s100 GZ0PBB0FBeze1CjBij4?o3
+!i10b 1
+Bbody
+R1
+R2
+R3
+R4
+l0
+L42
+VUE[0e>z@UCGNEl@zKldWe0
+R8
+32
+R18
+R19
+R20
+R12
+R13
+nbody
+!s100 UDi2KWi4><m_kV2[iPE:j0
+!i10b 1
+Econtrol_unit
+Z21 w1763910726
+R1
+R2
+R3
+R4
+R5
+Z22 8C:/altera/13.1/8bits cpu/src/control_unit.vhd
+Z23 FC:/altera/13.1/8bits cpu/src/control_unit.vhd
+l0
+L6
+VYXSH?D0^R1ED1[[=aMn6<1
+R8
+32
+Z24 !s108 1763991940.771000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.1/8bits cpu/src/control_unit.vhd|
+Z26 !s107 C:/altera/13.1/8bits cpu/src/control_unit.vhd|
+R12
+R13
+!s100 >Z@8AARNfh]]U<1^Neg1G2
+!i10b 1
+Afsm
+R1
+R2
+R3
+R4
+Z27 DEx4 work 12 control_unit 0 22 YXSH?D0^R1ED1[[=aMn6<1
+l49
+L39
+VPKVUSL;zS_O8_LfWfN5BU2
+R8
+32
+R24
+R25
+R26
+R12
+R13
+!s100 C^YN7?ZkWg9e0LeNBfYVZ3
+!i10b 1
+Ecpu_top
+Z28 w1763911979
+R1
+R2
+R3
+R4
+R5
+Z29 8C:/altera/13.1/8bits cpu/src/cpu_top.vhd
+Z30 FC:/altera/13.1/8bits cpu/src/cpu_top.vhd
+l0
+L6
+VVJW32RHC<OW9<DCkjCTD@3
+R8
+32
+Z31 !s108 1763991942.099000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.1/8bits cpu/src/cpu_top.vhd|
+Z33 !s107 C:/altera/13.1/8bits cpu/src/cpu_top.vhd|
+R12
+R13
+!s100 3OzCTU]F@E99]^RNWI8<E2
+!i10b 1
+Artl
+R27
+Z34 DEx4 work 12 internal_bus 0 22 T^IW3ZL3?;B4@nTJU3OkQ1
+R14
+Z35 DEx4 work 13 register_file 0 22 `E:C=>^aJPlloVJbOgk]30
+Z36 DEx4 work 15 instruction_reg 0 22 YzKGRdV@XmbcbSWRWl:;Q2
+Z37 DEx4 work 6 memory 0 22 AV[IE5m;FEPz@O:WGf=nR3
+Z38 DEx4 work 15 program_counter 0 22 Q4Qb9dDP<HFATG_^CB1:U3
+R1
+R2
+R3
+R4
+Z39 DEx4 work 7 cpu_top 0 22 VJW32RHC<OW9<DCkjCTD@3
+l55
+L13
+VzT;oTfaL61F4[5OH;BBIz0
+R8
+32
+R31
+R32
+R33
+R12
+R13
+!s100 b4JeKEeFEV_JIQg1@;aXf0
+!i10b 1
+Einstruction_reg
+Z40 w1763910471
+R2
+R1
+R3
+R4
+R5
+Z41 8C:/altera/13.1/8bits cpu/src/instruction_reg.vhd
+Z42 FC:/altera/13.1/8bits cpu/src/instruction_reg.vhd
+l0
+L5
+VYzKGRdV@XmbcbSWRWl:;Q2
+R8
+32
+Z43 !s108 1763991940.976000
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.1/8bits cpu/src/instruction_reg.vhd|
+Z45 !s107 C:/altera/13.1/8bits cpu/src/instruction_reg.vhd|
+R12
+R13
+!s100 KHnQC?kJ^NPJHV?7XzVdb1
+!i10b 1
+Artl
+R2
+R1
+R3
+R4
+R36
+l26
+L23
+VZ:iARP1Kl;^@S0m92N[;c1
+R8
+32
+R43
+R44
+R45
+R12
+R13
+!s100 @5d=99Q_K0IghWPN6S8T[3
+!i10b 1
+Einternal_bus
+Z46 w1763911054
+R2
+R1
+R3
+R4
+R5
+Z47 8C:/altera/13.1/8bits cpu/src/internal_bus.vhd
+Z48 FC:/altera/13.1/8bits cpu/src/internal_bus.vhd
+l0
+L5
+VT^IW3ZL3?;B4@nTJU3OkQ1
+R8
+32
+Z49 !s108 1763991941.855000
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.1/8bits cpu/src/internal_bus.vhd|
+Z51 !s107 C:/altera/13.1/8bits cpu/src/internal_bus.vhd|
+R12
+R13
+!s100 hY[@HXVIEYKH2<[:mo]540
+!i10b 1
+Acomb
+R2
+R1
+R3
+R4
+R34
+l17
+L16
+VJfBga3mQY1:aDn[@[P?<Q2
+R8
+32
+R49
+R50
+R51
+R12
+R13
+!s100 `JW=hEIE5T`Nk1m=j>Oz63
+!i10b 1
+Ememory
+Z52 w1763910429
+R1
+R2
+R3
+R4
+R5
+Z53 8C:/altera/13.1/8bits cpu/src/memory.vhd
+Z54 FC:/altera/13.1/8bits cpu/src/memory.vhd
+l0
+L6
+VAV[IE5m;FEPz@O:WGf=nR3
+R8
+32
+Z55 !s108 1763991941.171000
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.1/8bits cpu/src/memory.vhd|
+Z57 !s107 C:/altera/13.1/8bits cpu/src/memory.vhd|
+R12
+R13
+!s100 U>JNhFZ5?@Vco?6nCQLY52
+!i10b 1
+Artl
+R1
+R2
+R3
+R4
+R37
+l32
+L21
+VnIe@2NI@z1V?EhI041Zl22
+R8
+32
+R55
+R56
+R57
+R12
+R13
+!s100 o3T`P9iY2ZM9inJl0SgG?0
+!i10b 1
+Eprogram_counter
+Z58 w1763911294
+R1
+R2
+R3
+R4
+R5
+Z59 8C:/altera/13.1/8bits cpu/src/program_counter.vhd
+Z60 FC:/altera/13.1/8bits cpu/src/program_counter.vhd
+l0
+L6
+VQ4Qb9dDP<HFATG_^CB1:U3
+R8
+32
+Z61 !s108 1763991941.396000
+Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.1/8bits cpu/src/program_counter.vhd|
+Z63 !s107 C:/altera/13.1/8bits cpu/src/program_counter.vhd|
+R12
+R13
+!s100 Kb77Y6WQS00j=@gPA9^TN1
+!i10b 1
+Artl
+R1
+R2
+R3
+R4
+R38
+l25
+L22
+ViBzWN?>fXlfBKzdh0I3Q>0
+R8
+32
+R61
+R62
+R63
+R12
+R13
+!s100 ZQTzW<_`E@fKUj;Y<zk8d3
+!i10b 1
+Eregister_file
+Z64 w1763910680
+R1
+R2
+R3
+R4
+R5
+Z65 8C:/altera/13.1/8bits cpu/src/register_file.vhd
+Z66 FC:/altera/13.1/8bits cpu/src/register_file.vhd
+l0
+L6
+V`E:C=>^aJPlloVJbOgk]30
+R8
+32
+Z67 !s108 1763991941.621000
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.1/8bits cpu/src/register_file.vhd|
+Z69 !s107 C:/altera/13.1/8bits cpu/src/register_file.vhd|
+R12
+R13
+!s100 LWo<45g5N<fG`Pk2YSag50
+!i10b 1
+Artl
+R1
+R2
+R3
+R4
+R35
+l31
+L23
+V0zKhLgLM`gf1nG<_UebWc0
+R8
+32
+R67
+R68
+R69
+R12
+R13
+!s100 dNP=g2zQ38bO>7Gz6NDc61
+!i10b 1
+Etb_cpu_full
+Z70 w1764455349
+R3
+R4
+R5
+Z71 8C:/altera/13.1/8bits cpu/testbench/tb_cpu_full.vhd
+Z72 FC:/altera/13.1/8bits cpu/testbench/tb_cpu_full.vhd
+l0
+L4
+VnLjo]m6HE=aO>ni?UD06m2
+!s100 abVL[BA>_]AW:59dTo?Bk2
+R8
+32
+!i10b 1
+Z73 !s108 1764455458.430000
+Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.1/8bits cpu/testbench/tb_cpu_full.vhd|
+Z75 !s107 C:/altera/13.1/8bits cpu/testbench/tb_cpu_full.vhd|
+R12
+R13
+Asim
+R1
+R2
+R39
+R3
+R4
+DEx4 work 11 tb_cpu_full 0 22 nLjo]m6HE=aO>ni?UD06m2
+l13
+L7
+VdBDDfidejR][PB^UP[:R91
+!s100 ]7iIz3=IdKPN^G?38=U5J0
+R8
+32
+!i10b 1
+R73
+R74
+R75
+R12
+R13
