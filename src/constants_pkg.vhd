@@ -6,6 +6,20 @@ package constants_pkg is
   constant DATA_W : natural := 8;
   constant ADDR_W : natural := 12;
 
+  ------------------------------------------------------------------
+  -- Global memory configuration
+  --  - 4 KB total address space (0x000 to 0xFFF)
+  --  - Recommended map:
+  --      0x000?0xEFF : program space (~3.75 KB)
+  --      0xF00?0xFEF : data RAM (240 bytes)
+  --      0xFF0?0xFFF : I/O (16 bytes reserved)
+  ------------------------------------------------------------------
+  constant MEM_SIZE_C     : natural := 2**ADDR_W;  -- 4096 bytes
+  constant ROM_SIZE_C     : natural := 3840;       -- bytes (0x000?0xEFF)
+  constant RAM_START_ADDR : natural := ROM_SIZE_C; -- 0xF00
+  constant RAM_SIZE_C     : natural := 240;        -- bytes (0xF00?0xFEF)
+  constant IO_SIZE_C      : natural := 16;
+  constant IO_START_ADDR  : natural := MEM_SIZE_C - IO_SIZE_C; -- 0xFF0
   -- Bus sources
   type bus_src_t is (BUS_NONE, BUS_MEM, BUS_ALU, BUS_IMM, BUS_RF);
 

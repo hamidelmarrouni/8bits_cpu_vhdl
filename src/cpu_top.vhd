@@ -84,6 +84,10 @@ begin
   -- MEMORY
   -------------------------------------------------------------------
   u_mem: entity work.memory
+    generic map(
+    MEM_SIZE  => MEM_SIZE_C,
+    INIT_FILE => "my_program.hex"
+  )
     port map(
       clk   => clk,
       addr  => s_mem_addr,

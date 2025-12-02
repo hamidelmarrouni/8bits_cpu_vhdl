@@ -1,14 +1,4 @@
-{C:/altera/13.1/8bits cpu/src/constants_pkg.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/src/constants_pkg.vhd}
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling package constants_pkg
--- Compiling package body constants_pkg
--- Loading package constants_pkg
-
-} {} {}} {C:/altera/13.1/8bits cpu/src/alu.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/src/alu.vhd}
+{C:/altera/13.1/8bits cpu/src/alu.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/src/alu.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -17,6 +7,16 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package constants_pkg
 -- Compiling entity alu
 -- Compiling architecture comb of alu
+
+} {} {}} {C:/altera/13.1/8bits cpu/src/register_file.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/src/register_file.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package constants_pkg
+-- Compiling entity register_file
+-- Compiling architecture rtl of register_file
 
 } {} {}} {C:/altera/13.1/8bits cpu/src/internal_bus.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/src/internal_bus.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -28,7 +28,38 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity internal_bus
 -- Compiling architecture comb of internal_bus
 
-} {} {}} {C:/altera/13.1/8bits cpu/src/cpu_top.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/src/cpu_top.vhd}
+} {} {}} {C:/altera/13.1/8bits cpu/src/constants_pkg.vhd} {1 {vcom -work work -2002 -explicit {C:\altera\13.1\8bits cpu\src\constants_pkg.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package constants_pkg
+-- Compiling package body constants_pkg
+-- Loading package constants_pkg
+
+} {} {}} {C:/altera/13.1/8bits cpu/src/control_unit.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/src/control_unit.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package constants_pkg
+-- Compiling entity control_unit
+-- Compiling architecture fsm of control_unit
+
+} {} {}} {C:/altera/13.1/8bits cpu/src/memory.vhd} {1 {vcom -work work -2002 -explicit {C:\altera\13.1\8bits cpu\src\memory.vhd}
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Loading package constants_pkg
+-- Compiling entity memory
+-- Compiling architecture rtl of memory
+
+} {} {}} {C:/altera/13.1/8bits cpu/src/cpu_top.vhd} {1 {vcom -work work -2002 -explicit {C:\altera\13.1\8bits cpu\src\cpu_top.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -38,6 +69,7 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling entity cpu_top
 -- Compiling architecture rtl of cpu_top
 -- Loading entity program_counter
+-- Loading package std_logic_textio
 -- Loading entity memory
 -- Loading entity instruction_reg
 -- Loading entity register_file
@@ -45,25 +77,24 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading entity internal_bus
 -- Loading entity control_unit
 
-} {} {}} {C:/altera/13.1/8bits cpu/src/program_counter.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/src/program_counter.vhd}
+} {} {}} {C:/altera/13.1/8bits cpu/src/tb_uart_rx.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/src/tb_uart_rx.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Loading package constants_pkg
--- Compiling entity program_counter
--- Compiling architecture rtl of program_counter
+-- Compiling entity tb_uart_rx
+-- Compiling architecture sim of tb_uart_rx
+-- Loading entity uart_rx
 
-} {} {}} {C:/altera/13.1/8bits cpu/src/instruction_reg.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/src/instruction_reg.vhd}
+} {} {}} {C:/altera/13.1/8bits cpu/src/uart_rx.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/src/uart_rx.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Loading package constants_pkg
--- Compiling entity instruction_reg
--- Compiling architecture rtl of instruction_reg
+-- Compiling entity uart_rx
+-- Compiling architecture rtl of uart_rx
 
 } {} {}} {C:/altera/13.1/8bits cpu/testbench/tb_cpu_full.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/testbench/tb_cpu_full.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
@@ -76,36 +107,24 @@ Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package constants_pkg
 -- Loading entity cpu_top
 
-} {} {}} {C:/altera/13.1/8bits cpu/src/register_file.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/src/register_file.vhd}
+} {} {}} {C:/altera/13.1/8bits cpu/src/instruction_reg.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/src/instruction_reg.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Loading package constants_pkg
--- Compiling entity register_file
--- Compiling architecture rtl of register_file
+-- Compiling entity instruction_reg
+-- Compiling architecture rtl of instruction_reg
 
-} {} {}} {C:/altera/13.1/8bits cpu/src/control_unit.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/src/control_unit.vhd}
+} {} {}} {C:/altera/13.1/8bits cpu/src/program_counter.vhd} {1 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/src/program_counter.vhd}
 Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
 -- Loading package constants_pkg
--- Compiling entity control_unit
--- Compiling architecture fsm of control_unit
-
-} {} {}} {C:/altera/13.1/8bits cpu/src/memory.vhd} {2 {vcom -work work -2002 -explicit {C:/altera/13.1/8bits cpu/src/memory.vhd}
-Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Loading package constants_pkg
--- Compiling entity memory
--- Compiling architecture rtl of memory
-** Warning: C:/altera/13.1/8bits cpu/src/memory.vhd(27): (vcom-1074) Non-locally static OTHERS choice is allowed only if it is the only choice of the only association.
-
+-- Compiling entity program_counter
+-- Compiling architecture rtl of program_counter
 
 } {} {}}
